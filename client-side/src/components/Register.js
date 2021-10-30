@@ -13,7 +13,8 @@ const history = useHistory();
     lastName: "",
     email: "",
     password: "",
-    studentId:""
+    studentId:"",
+    
   });
 
   const inputChangeHandler = (e) => {
@@ -38,6 +39,7 @@ const history = useHistory();
         email: "",
         password: "",
         studentId:"",
+       
       });
       history.push("/login");
     } catch (e) {

@@ -11,10 +11,10 @@ app.use(Cors());
 
 
 mongoose.connect("mongodb+srv://admin-anshuman:test123@cluster0.ultcx.mongodb.net/hostelDatabase?retryWrites=true&w=majority", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
+  // useNewUrlParser: true,
+  // useUnifiedTopology: true,
+  // useCreateIndex: true,
+  // useFindAndModify: false,
 });
 
   app.use("/", routes);

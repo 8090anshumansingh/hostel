@@ -25,7 +25,21 @@ function Login() {
   
     const submitHandler = async () => {
       try {
-       
+        const res = await axios.post("/user/login", user);
+        setUser({
+          email: "",
+          password: "",
+        });
+          // console.log(res.data.data._id);
+          if (res.data.msg === "login") {
+           console.log("successful");
+           history.push("/posts/"+res.data.data._id)
+          }
+         
+          else{
+            console.log("incorrect");
+           
+          }
       
       } catch (e) {
         console.log(e);
