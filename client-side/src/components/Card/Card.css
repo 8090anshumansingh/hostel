@@ -1,0 +1,47 @@
+.card-container{
+margin: 40px;
+}
+
+.title-text{
+font-size: 1.2rem;
+font-weight: 700;
+color: #FFFFFF;
+letter-spacing: 0.05em;
+text-align: center;
+justify-content: center;
+padding-top: 90px;
+}
+.price-text{
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+  text-align: center;
+  justify-content: center;
+  padding-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+.buttons{
+  text-align: center;
+  padding-top: 45px;
+}
+.date-info{
+  padding-top: 40px;
+}
+.date-style{
+  background-color: #FA9E1C;
+  height: auto;
+  width: 60%;
+  text-align: center;
+  margin:auto;
+  border-radius: 20px;
+}
+.button-style{
+  padding: 12px 30px;
+  border-radius: 20px;
+  color: #FFFFFF;
+  background-image: linear-gradient(to right, #FA9E1C , #72147E);
+  cursor: pointer;
+}
+.button-style:hover{
+  background-image: linear-gradient(to right, #72147E,#FA9E1C );
+  transition: 0.3s ease-out;
+}

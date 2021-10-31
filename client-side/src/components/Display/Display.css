@@ -1,0 +1,35 @@
+.display-container{
+  padding-bottom: 50px;
+}
+.main-heading{
+  color: #232323;
+  font-family: 'Open Sans', sans-serif;
+  padding-top: 80px;
+  text-align: center;
+}
+.travel-text-main{
+  text-align: center;
+  margin: auto;
+  padding: 30px;
+  line-height: 1.336;
+}
+.travel-text{
+  font-size: 1.4rem;
+  color:#929191;
+   font-style: italic;
+   font-family: 'Lora', serif;
+}
+.card-item{
+  display: inline-flex;
+  justify-content: center;
+  margin-left: 200px;
+  flex: 0.3;
+}
+@media only screen and (max-width: 720px) {
+  .card-item{
+    display: block;
+    justify-content: center;
+    margin-left: 2px;
+    flex: 0.1;
+  }
+}

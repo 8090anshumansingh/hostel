@@ -1,0 +1,26 @@
+.client-container{
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+.client-title{
+  text-align: center;
+}
+
+.client-card-container{
+  display: flex;
+  margin-top: 70px;
+  padding-left: 200px;
+  padding-right: 120px;
+}
+
+@media only screen and (max-width: 720px) {
+  .client-card-container{
+    display: block;
+    justify-content: center;
+    margin-left: 2px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 10px;
+    flex: 0.1;
+  }
+}

@@ -1,0 +1,83 @@
+.cardroom-container{
+  height: 350px;
+  width:600px;
+  display: flex;
+
+}
+.place-title{
+  background-color: #fa9e1c;
+  width:60%;
+  color: white;
+  padding: 5px 10px;
+  margin-top: 220px;
+}
+.cardroom-details{
+  margin-left: 20px;
+}
+.price-section{
+  display:flex;
+}
+.cardroom-text{
+  font-size: 14px;
+    font-weight: 200;
+    color: #929191;
+    margin-left: 12px;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.cardroom-price{
+  font-size: 36px;
+  font-weight: 700;
+color: #eda84a;
+}
+.cardroom-rating{
+  color:#F7A440;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+.cardroom-icons{
+  color:#a5a5a5;
+  margin-top: 20px;
+  margin-left: -12px;
+}
+.icon{
+  margin: 10px;
+  font-size: 25px;
+}
+.button{
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.cardroom-button{
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.button-styles{
+  padding: 8px 20px;
+  border-radius: 10px;
+  background-color:#F7A440;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.button-style:hover{
+  background-color: #EBA83A;
+
+}
+.cardroom-info{
+  width: 60%;
+  font-size: 14px;
+font-weight: 400;
+color: #929191;
+margin-top: 16px;
+font-family: 'Montserrat', sans-serif;
+
+}
+@media only screen and (max-width: 720px) {
+  .cardroom-container{
+    display: block;
+    justify-content: center;
+    flex: 0.1;
+  }
+
+}
