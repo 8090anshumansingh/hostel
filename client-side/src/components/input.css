@@ -1,0 +1,45 @@
+.input-box{
+  text-align: center;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0);
+  width: 600px;
+height: 120px;
+border: 3px solid #cccccc;
+padding: 5px;
+margin: auto;
+
+
+}
+.select-class{
+    padding: 8px 20px;
+    background-image: linear-gradient(to right, #77ACF1 , #3EDBF0);
+
+}
+.post-box{
+
+    padding-top: 45px;
+}
+.card{
+  width:60%;
+  margin: auto;
+  text-align: center;
+  padding: 15px 10px;
+  margin-bottom:  40px;
+  border: 1px solid black;
+  box-shadow:   2px 2px 2px 1px rgba(0,0,0, 0.2);
+ }
+.button-style{
+  margin-left: 5px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: #FFFFFF;
+  background-image: linear-gradient(to right, #FF5151 , #DA0037);
+  cursor: pointer;
+}
+.postname{
+  font-weight: bold;
+  text-align: left;
+}
+.button-style:hover{
+  background-image: linear-gradient(to right, #DA0037,#FF5151);
+  transition: 0.3s ease-out;
+}
