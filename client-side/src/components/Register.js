@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
  import axios from "../axios.js";
+ import './Register.css';
 
 
 function Register() {

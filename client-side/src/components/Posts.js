@@ -3,6 +3,7 @@ import axios from "../axios.js";
 import { useHistory } from "react-router-dom";
 import {useParams} from "react-router-dom";
 import "./hostel.css";
+import './input.css';
 
 
 function Posts() {
@@ -40,7 +41,7 @@ function Posts() {
              setLogName(res.data.name);
              setId(res.data.studentId);
             setLogRole(res.data.role);
-         
+
         }
         catch(e){
               console.log(e);
@@ -53,7 +54,7 @@ function Posts() {
              console.log(res.data);
             setAllPosts(res.data[0].complaints);
 
-       
+
         }
         catch(e){
               console.log(e);
@@ -64,10 +65,10 @@ function Posts() {
       fetchAllInfo();
       fetchAllComplaints();
   }, []);
-  
+
     const inputChangeHandler = (e) => {
         const { name, value } = e.target;
-    
+
         setPost((prev) => {
           return {
             ...prev,
@@ -85,7 +86,7 @@ function Posts() {
       };
       const typeChangeHandler = (e) => {
         const { name, value } = e.target;
-    
+
         setPost((prev) => {
           return {
             ...prev,
@@ -97,9 +98,9 @@ function Posts() {
       const logouthandler=()=>{
           history.push("/login");
       }
-    
-    
-  
+
+
+
     const submitHandler = async () => {
       try {
            console.log(post);
@@ -112,62 +113,64 @@ function Posts() {
         complaint:""
         });
            console.log(res.data);
-       
-      
+
+
       } catch (e) {
         console.log(e);
       }
     };
-  
-    
-  
+
+
+
     return (
       <React.Fragment>
-       
-          <div className="post-box">
-          <div className="input">
-          <textarea name="complaint" rows="4" cols="50" value={post.complaint} onChange={inputChangeHandler}></textarea>           
-           <button onClick={submitHandler}>Post</button>
-           <label for="type">Choose the type of Complaint:</label>
 
-<select name="type" onChange={typeChangeHandler}>
+          <div className="post-box">
+          <div className="input input-box">
+          <textarea name="complaint" rows="4" cols="50" value={post.complaint} onChange={inputChangeHandler}></textarea>
+        <br/>
+<select className = "select-class" name="type" onChange={typeChangeHandler}>
 <option value="">Choose a Type</option>
-  <option value="hostel">Hostel</option>
-  <option value="mess">Mess</option>
- 
+ <option value="hostel">Hostel</option>
+ <option value="mess">Mess</option>
+
 </select>
+           <button onClick={submitHandler} className="button-style">Post</button>
+
           </div>
 
           <div className="totalPosts">
-         
+
 
             {allPosts.map((post)=>(
             <div className="card">
 
                 {post.role==="student" && <div>
-                <div className="postname">{post.name}</div>
-                <div className="postname">{post.studentId}</div>
+                <div className="postname">Name: {post.name}</div>
+                <div className="postname">ID:{post.studentId}</div>
+                  <div className="postname">Type: {post.type}</div>
+                  <br/>
                     </div>}
 
                     {post.role==="CR" && <div style={{color:"green"}}> Class Representative </div>}
-               
-                <div className="postname">{post.complaint}</div>
-                <div className="postname">{post.type}</div>
+
+                <div className="postcomplaint">{post.complaint}</div>
+
 
             </div>
-            ))}    
-               
+            ))}
+
           </div>
-  
+
           </div>
 
 
           <div>
             <button onClick={logouthandler} style={{cursor:"pointer"}}> Log OUT</button>
           </div>
-        
+
       </React.Fragment>
     );
   }
-  
+
   export default Posts;
