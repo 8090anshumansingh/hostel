@@ -12,7 +12,7 @@ app.use(Cors());
 
 
 
-mongoose.connect("mongodb+srv://admin-anshuman:test123@cluster0.ultcx.mongodb.net/hostelDatabase?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGO_URL, {
   // useNewUrlParser: true,
   // useUnifiedTopology: true,
   // useCreateIndex: true,
