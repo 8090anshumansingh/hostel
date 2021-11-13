@@ -13,10 +13,10 @@ app.use(Cors());
 
 
 mongoose.connect(process.env.MONGO_URL, {
-  // useNewUrlParser: true,
-  // useUnifiedTopology: true,
-  // useCreateIndex: true,
-  // useFindAndModify: false,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
 });
 
   app.use("/", routes);
