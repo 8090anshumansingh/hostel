@@ -8,7 +8,7 @@ import Cors from "cors";
 const connection_url =
   "mongodb+srv://admin-anshuman:test123@cluster0.ultcx.mongodb.net/hostelDatabase?retryWrites=true&w=majority";
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 8000;
 
 app.use(express.json());
 app.use(Cors());
@@ -16,8 +16,8 @@ app.use(Cors());
 
 
 mongoose.connect(connection_url, {
-  // useNewUrlParser: true,
-  // useUnifiedTopology: true,
+   useNewUrlParser: true,
+   useUnifiedTopology: true,
   // useCreateIndex: true,
   // useFindAndModify: false,
 });
